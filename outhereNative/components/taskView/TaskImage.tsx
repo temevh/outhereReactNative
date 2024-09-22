@@ -2,7 +2,7 @@ import { View, Image, StyleSheet } from "react-native";
 
 const TaskImage = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Image
         source={require("../../assets/images/reading.png")}
         style={styles.image}
@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
   image: {
     width: 300,
     height: 300,
+  },
+  container: {
+    paddingBottom: 40,
   },
 });
 

@@ -1,11 +1,13 @@
 import { View, Text, StyleSheet } from "react-native";
 import Button from "./Button";
 import TaskImage from "./TaskImage";
+import TaskText from "./TaskText";
 
 const MainTask = () => {
   return (
     <View style={styles.container}>
       <TaskImage />
+      <TaskText />
       <View style={styles.buttonContainer}>
         <Button succeed={true} />
         <Button succeed={false} />

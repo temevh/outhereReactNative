@@ -6,9 +6,10 @@ const HeaderText = () => {
 
 const styles = StyleSheet.create({
   textStyle: {
-    fontSize: 40,
+    fontSize: 50,
     color: "white",
     fontWeight: "bold",
+    paddingBottom: 100,
   },
 });
 
