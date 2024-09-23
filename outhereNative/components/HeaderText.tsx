@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
     paddingBottom: 100,
+    fontFamily: "RobotoMono",
   },
 });
 

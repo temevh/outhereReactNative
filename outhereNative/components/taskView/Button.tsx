@@ -26,5 +26,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
     fontSize: 24,
+    fontFamily: "RobotoMono",
   },
 });
