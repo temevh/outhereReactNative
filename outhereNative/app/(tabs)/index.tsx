@@ -1,32 +1,21 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MainTask from "@/components/taskView/MainTask";
-import HeaderText from "../../components/HeaderText";
-import useFonts from "@/hooks/useFonts";
-import AppLoading from "expo-app-loading";
+import TaskSucceeded from "@/components/reviewView/TaskSucceeded";
+const Stack = createNativeStackNavigator();
 
-export default function HomeScreen() {
-  const fontsLoaded = useFonts({
-    RobotoMono: require("../../assets/fonts/RobotoMono.ttf"), // Adjust the path according to your project structure
-  });
+const AppNavigator = () => (
+  <Stack.Navigator initialRouteName="MainTask">
+    <Stack.Screen name="MainTask" component={MainTask} />
+    <Stack.Screen name="TaskSucceeded" component={TaskSucceeded} />
+  </Stack.Navigator>
+);
 
-  /*
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  }*/
+const App = () => (
+  <NavigationContainer>
+    <AppNavigator />
+  </NavigationContainer>
+);
 
-  return (
-    <View style={styles.container}>
-      <HeaderText />
-      <MainTask />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "black",
-    alignItems: "center",
-  },
-});
+export default App;

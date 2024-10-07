@@ -1,12 +1,14 @@
 import { View, Text, StyleSheet } from "react-native";
 
-const taskSucceeded = () => {
+const TaskSucceeded = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Great job!</Text>
     </View>
   );
 };
+
+export default TaskSucceeded;
 
 const styles = StyleSheet.create({
   container: {
@@ -15,5 +17,3 @@ const styles = StyleSheet.create({
     backgroundColor: "green",
   },
 });
-
-export default taskSucceeded;
