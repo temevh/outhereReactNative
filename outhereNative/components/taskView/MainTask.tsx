@@ -8,6 +8,7 @@ const MainTask = () => {
     <View style={styles.container}>
       <TaskImage />
       <TaskText />
+      <Text style={styles.subText}>Did you succeed?</Text>
       <View style={styles.buttonContainer}>
         <Button succeed={true} />
         <Button succeed={false} />
@@ -29,11 +30,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonContainer: {
-    top: 50,
+    top: 20,
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     gap: 30,
+  },
+  subText: {
+    color: "white",
+    fontSize: 22,
+    paddingTop: 20,
   },
 });
