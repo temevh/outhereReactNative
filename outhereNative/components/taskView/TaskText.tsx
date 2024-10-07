@@ -19,7 +19,7 @@ const TaskText = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: 250,
+    height: 200,
     width: 350,
     borderRadius: 14,
     backgroundColor: "#595151",
@@ -29,18 +29,18 @@ const styles = StyleSheet.create({
   dateText: {
     fontSize: 24,
     color: "white",
-    opacity: 0.6,
+    opacity: 0.4,
   },
   taskText: {
-    fontSize: 32,
+    fontSize: 36,
     color: "white",
-    paddingBottom: 20,
+    paddingVertical: 20,
     textAlign: "center",
   },
   categoryText: {
     fontSize: 20,
     color: "white",
-    opacity: 0.6,
+    opacity: 0.4,
   },
 });
 
