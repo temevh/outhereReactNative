@@ -1,21 +1,21 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { View, Text, StyleSheet } from "react-native";
 import MainTask from "@/components/taskView/MainTask";
-import TaskSucceeded from "@/components/reviewView/TaskSucceeded";
-const Stack = createNativeStackNavigator();
+import HeaderText from "@/components/HeaderText";
 
-const AppNavigator = () => (
-  <Stack.Navigator initialRouteName="MainTask">
-    <Stack.Screen name="MainTask" component={MainTask} />
-    <Stack.Screen name="TaskSucceeded" component={TaskSucceeded} />
-  </Stack.Navigator>
-);
+export default function HomeScreen() {
+  return (
+    <View style={styles.container}>
+      <HeaderText />
+      <MainTask />
+    </View>
+  );
+}
 
-const App = () => (
-  <NavigationContainer>
-    <AppNavigator />
-  </NavigationContainer>
-);
-
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "black",
+    alignItems: "center",
+  },
+});

@@ -1,28 +1,17 @@
 import { View, Text, StyleSheet } from "react-native";
-import Button from "./Button";
+import SuccessButton from "./SuccessButton";
 import TaskImage from "./TaskImage";
 import TaskText from "./TaskText";
-import TaskSucceeded from "../reviewView/taskSucceeded";
-
-import { useNavigation } from "@react-navigation/native";
+import TaskSucceeded from "../reviewView/TaskSucceeded";
 
 const MainTask = () => {
-  const navigation = useNavigation();
-
-  const handlePress = (succeed: boolean) => {
-    if (succeed) {
-      navigation.navigate("TaskSucceeded");
-    } else {
-      // Handle the false case if needed
-    }
-  };
-
   return (
     <View style={styles.container}>
-      <Text style={styles.subText}>Did you succeed?</Text>
+      <TaskImage />
+      <TaskText />
       <View style={styles.buttonContainer}>
-        <Button onPress={() => handlePress(true)} title="Yes" />
-        <Button onPress={() => handlePress(false)} title="No" />
+        <SuccessButton succeed={true} />
+        <SuccessButton succeed={false} />
       </View>
     </View>
   );
