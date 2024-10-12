@@ -1,10 +1,9 @@
 import { View, Text, StyleSheet } from "react-native";
-import { Link } from "expo-router";
 
 const TaskSucceeded = () => {
   return (
     <View style={styles.container}>
-      <Text>Great job!</Text>
+      <Text style={styles.header}>Good job!</Text>
     </View>
   );
 };
@@ -15,6 +14,13 @@ const styles = StyleSheet.create({
   container: {
     height: "100%",
     width: "100%",
-    backgroundColor: "green",
+    backgroundColor: "#184632",
+    alignItems: "center",
+  },
+  header: {
+    fontSize: 40,
+    fontWeight: "bold",
+    color: "white",
+    top: 20,
   },
 });
