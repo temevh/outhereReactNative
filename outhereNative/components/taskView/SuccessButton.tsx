@@ -1,14 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { Link } from "expo-router";
+import { Text, StyleSheet, TouchableOpacity } from "react-native";
+import { useRouter } from "expo-router";
 
 const SuccessButton = ({ succeed }: { succeed: boolean }) => {
+  const router = useRouter();
   const btnText = succeed ? "I DID IT!" : "NOT YET...";
   const backgroundColor = succeed ? "#184632" : "#FF0000";
 
   const handlePress = () => {
     if (succeed) {
-      <Link href={"/(tabs)\reviewViewTaskSucceeded"} />;
+      router.push("/(tabs)/TaskSucceeded");
     } else {
       // Handle the false case if needed
     }
@@ -25,7 +26,6 @@ const SuccessButton = ({ succeed }: { succeed: boolean }) => {
 };
 
 export default SuccessButton;
-
 const styles = StyleSheet.create({
   buttonStyle: {
     height: 60,

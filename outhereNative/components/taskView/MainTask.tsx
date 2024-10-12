@@ -2,7 +2,7 @@ import { View, Text, StyleSheet } from "react-native";
 import SuccessButton from "./SuccessButton";
 import TaskImage from "./TaskImage";
 import TaskText from "./TaskText";
-import TaskSucceeded from "../reviewView/TaskSucceeded";
+import TaskSucceeded from "../../app/(tabs)/TaskSucceeded";
 
 const MainTask = () => {
   return (

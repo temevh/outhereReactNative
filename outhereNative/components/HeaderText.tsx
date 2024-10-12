@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { Text, StyleSheet } from "react-native";
 
 const HeaderText = () => {
   return <Text style={styles.textStyle}>outhere</Text>;
