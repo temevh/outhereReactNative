@@ -1,19 +1,12 @@
 import { View, Text, StyleSheet } from "react-native";
-import Slider from "@react-native-community/slider";
+import SliderComponent from "./SliderComponent";
 
 const TaskSucceeded = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Good job!</Text>
       <View style={styles.sliderContainer}>
-        <Slider
-          style={styles.sliderStyle}
-          minimumValue={0}
-          maximumValue={10}
-          minimumTrackTintColor="#FFFFFF"
-          maximumTrackTintColor="#000000"
-          step={1}
-        />
+        <SliderComponent />
       </View>
     </View>
   );
@@ -39,9 +32,5 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "70%",
     alignItems: "center",
-  },
-  sliderStyle: {
-    width: 300,
-    height: 80,
   },
 });
