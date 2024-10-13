@@ -9,9 +9,11 @@ const SuccessButton = ({ succeed }: { succeed: boolean }) => {
 
   const handlePress = () => {
     if (succeed) {
+      console.log("succeed");
       router.push("/(tabs)/reviewView/TaskSucceeded");
     } else {
-      // taskFailed screen
+      console.log("failed");
+      router.push("/(tabs)/reviewView/TaskFailed");
     }
   };
 
