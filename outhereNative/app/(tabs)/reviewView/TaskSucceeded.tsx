@@ -5,8 +5,12 @@ const TaskSucceeded = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Good job!</Text>
-      <View style={styles.sliderContainer}>
-        <SliderComponent />
+      <View style={styles.selectionsContainer}>
+        <SliderComponent header={"How easy was it?"} />
+        <SliderComponent header={"Did you enjoy the task?"} />
+        <SliderComponent
+          header={"Do you feel good after completing the task?"}
+        />
       </View>
     </View>
   );
@@ -27,10 +31,10 @@ const styles = StyleSheet.create({
     color: "white",
     top: 20,
   },
-  sliderContainer: {
+  selectionsContainer: {
     top: 50,
     width: "100%",
-    height: "70%",
+    height: "80%",
     alignItems: "center",
   },
 });
