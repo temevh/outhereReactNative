@@ -4,7 +4,7 @@ const TaskImage = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={require("../../assets/images/reading.png")}
+        source={require("../../../assets/images/reading.png")}
         style={styles.image}
       />
     </View>

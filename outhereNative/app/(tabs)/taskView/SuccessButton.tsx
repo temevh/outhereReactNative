@@ -9,9 +9,9 @@ const SuccessButton = ({ succeed }: { succeed: boolean }) => {
 
   const handlePress = () => {
     if (succeed) {
-      router.push("/(tabs)/TaskSucceeded");
+      router.push(`/tabs/reviewView/TaskSucceeded`);
     } else {
-      // Handle the false case if needed
+      // taskFailed screen
     }
   };
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import MainTask from "@/components/taskView/MainTask";
+import MainTask from "@/app/(tabs)/taskView/MainTask";
 import HeaderText from "@/components/HeaderText";
 
 export default function HomeScreen() {
