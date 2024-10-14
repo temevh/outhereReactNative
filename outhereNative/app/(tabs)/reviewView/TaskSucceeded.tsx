@@ -14,9 +14,14 @@ const TaskSucceeded = () => {
           header={"Do you feel good after completing the task?"}
         />
       </View>
-      <TouchableOpacity style={styles.buttonStyle}>
-        <Text style={styles.textStyle}>Submit</Text>
-      </TouchableOpacity>
+      <View style={styles.buttonWrapper}>
+        <TouchableOpacity style={styles.buttonSecondaryStyle}>
+          <Text style={styles.textStyle}>Submit</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.buttonStyle}>
+          <Text style={styles.textStyle}>Submit</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -42,6 +47,11 @@ const styles = StyleSheet.create({
     height: "80%",
     alignItems: "center",
   },
+  buttonWrapper: {
+    position: "relative",
+    height: 100,
+    width: 260,
+  },
   buttonStyle: {
     height: 100,
     width: 260,
@@ -49,6 +59,18 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#568f56",
+    position: "absolute",
+  },
+  buttonSecondaryStyle: {
+    height: 100,
+    width: 260,
+    borderRadius: 14,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "white",
+    position: "absolute",
+    top: 5,
+    left: 5,
   },
   textStyle: {
     color: "white",
