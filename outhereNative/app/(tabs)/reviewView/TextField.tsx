@@ -1,30 +1,45 @@
 import { useState } from "react";
-import { StyleSheet, SafeAreaView, TextInput } from "react-native";
+import { StyleSheet, TextInput, Text, View } from "react-native";
 
 const TextField = () => {
-  const [text, onChangeText] = useState("Useless Text");
-  const [number, onChangeNumber] = useState("");
+  const [text, onChangeText] = useState("");
 
   return (
-    <SafeAreaView>
+    <View style={styles.container}>
+      <Text style={styles.questionText}>Write a few words about the task</Text>
       <TextInput
         style={styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
-        placeholder="useless placeholder"
+        onChangeText={onChangeText}
+        value={text}
+        multiline={true}
+        textAlignVertical="top"
       />
-    </SafeAreaView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   input: {
-    height: 100,
-    width: 260,
+    height: 120,
+    width: 300,
     margin: 12,
-    borderWidth: 1,
+    borderWidth: 3,
+    borderColor: "white",
     padding: 10,
+    borderRadius: 14,
     color: "white",
+    fontSize: 14,
+  },
+  questionText: {
+    fontSize: 26,
+    color: "white",
+    width: 260,
+    textAlign: "center",
+  },
+  container: {
+    top: 10,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 

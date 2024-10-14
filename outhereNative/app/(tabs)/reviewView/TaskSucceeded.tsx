@@ -9,7 +9,7 @@ const TaskSucceeded = () => {
     <View style={styles.container}>
       <Text style={styles.header}>Good job!</Text>
       <View style={styles.selectionsContainer}>
-        <SliderComponent header={"How easy was it?"} />
+        <SliderComponent header={"How easy was the task?"} />
         <SliderComponent header={"Did you enjoy the task?"} />
         <SliderComponent
           header={"Do you feel good after completing the task?"}
