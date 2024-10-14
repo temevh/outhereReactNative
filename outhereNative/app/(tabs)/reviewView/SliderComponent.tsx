@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
   sliderStyle: {
     width: 300,
     height: 60,
+    color: "white",
   },
   container: {
     alignItems: "center",
