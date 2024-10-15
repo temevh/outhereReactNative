@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#568f56",
+    backgroundColor: "#ff3535",
   },
   textStyle: {
     color: "white",
