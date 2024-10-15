@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import SliderComponent from "./SliderComponent";
 import TextField from "./TextField";
-import { router, useRouter } from "expo-router";
+import { router } from "expo-router";
 
 const TaskSucceeded = () => {
   const handlePress = () => {

@@ -2,22 +2,21 @@ import React from "react";
 import { Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
 
-const SuccessButton = () => {
+const FailButton = () => {
   const router = useRouter();
 
   const handlePress = () => {
-    console.log("succeed");
-    router.push("/(tabs)/reviewView/TaskSucceeded");
+    console.log("fail");
+    router.push("/(tabs)/reviewView/TaskFailed");
   };
-
   return (
     <TouchableOpacity style={[styles.buttonStyle]} onPress={handlePress}>
-      <Text style={styles.textStyle}>I did it!</Text>
+      <Text style={styles.textStyle}>Not yet...</Text>
     </TouchableOpacity>
   );
 };
 
-export default SuccessButton;
+export default FailButton;
 
 const styles = StyleSheet.create({
   buttonStyle: {
@@ -26,7 +25,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#13ae5c",
+    backgroundColor: "#f14722",
   },
   textStyle: {
     fontWeight: "bold",

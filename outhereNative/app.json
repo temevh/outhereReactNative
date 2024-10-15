@@ -25,7 +25,14 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
-    "plugins": ["expo-router", "expo-font"],
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-font",
+      {
+        "fonts": ["../assets/fonts/RobotoMono.ttf"]
+      }
+    ],
     "experiments": {
       "typedRoutes": true
     }
