@@ -1,7 +1,12 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import SliderComponent from "./SliderComponent";
+import { router } from "expo-router";
 
 const TaskFailed = () => {
+  const handlePress = () => {
+    router.back();
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Its okay!</Text>
@@ -12,6 +17,9 @@ const TaskFailed = () => {
           header={"Do you feel good after completing the task?"}
         />
       </View>
+      <TouchableOpacity style={styles.buttonStyle} onPress={handlePress}>
+        <Text style={styles.textStyle}>Submit</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -36,5 +44,17 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "80%",
     alignItems: "center",
+  },
+  buttonStyle: {
+    height: 100,
+    width: 260,
+    borderRadius: 14,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#568f56",
+  },
+  textStyle: {
+    color: "white",
+    fontSize: 50,
   },
 });
