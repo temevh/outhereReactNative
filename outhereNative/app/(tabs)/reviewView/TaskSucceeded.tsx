@@ -1,9 +1,12 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import SliderComponent from "./SliderComponent";
 import TextField from "./TextField";
+import { router, useRouter } from "expo-router";
 
 const TaskSucceeded = () => {
-  const handlePress = () => {};
+  const handlePress = () => {
+    router.back();
+  };
 
   return (
     <View style={styles.container}>
@@ -16,7 +19,7 @@ const TaskSucceeded = () => {
         />
         <TextField />
       </View>
-      <TouchableOpacity style={styles.buttonStyle}>
+      <TouchableOpacity style={styles.buttonStyle} onPress={handlePress}>
         <Text style={styles.textStyle}>Submit</Text>
       </TouchableOpacity>
     </View>
