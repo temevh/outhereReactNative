@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   buttonContainer: {
-    top: 10,
+    top: 20,
     justifyContent: "space-between",
     alignItems: "center",
     gap: 20,

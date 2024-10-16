@@ -20,6 +20,7 @@ const TaskSucceeded = () => {
         <TextField />
       </View>
       <TouchableOpacity style={styles.buttonStyle} onPress={handlePress}>
+        <View style={styles.whiteContainer}></View>
         <Text style={styles.textStyle}>Submit</Text>
       </TouchableOpacity>
     </View>
@@ -50,13 +51,22 @@ const styles = StyleSheet.create({
   buttonStyle: {
     height: 100,
     width: 260,
-    borderRadius: 14,
+    borderRadius: 24,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#568f56",
   },
+  whiteContainer: {
+    height: 90,
+    width: 250,
+    borderRadius: 24,
+    backgroundColor: "white",
+    position: "absolute",
+    zIndex: 1,
+  },
   textStyle: {
-    color: "white",
+    color: "black",
     fontSize: 50,
+    zIndex: 2,
   },
 });

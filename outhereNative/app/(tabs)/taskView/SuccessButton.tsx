@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "black",
     opacity: 0.8,
-    fontSize: 46,
+    fontSize: 50,
     fontFamily: "RobotoMono",
     zIndex: 2,
   },
