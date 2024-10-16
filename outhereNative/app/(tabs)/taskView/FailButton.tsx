@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, TouchableOpacity } from "react-native";
+import { Text, StyleSheet, TouchableOpacity, View } from "react-native";
 import { useRouter } from "expo-router";
 
 const FailButton = () => {
@@ -10,7 +10,8 @@ const FailButton = () => {
     router.push("/(tabs)/reviewView/TaskFailed");
   };
   return (
-    <TouchableOpacity style={[styles.buttonStyle]} onPress={handlePress}>
+    <TouchableOpacity style={styles.buttonStyle} onPress={handlePress}>
+      <View style={styles.whiteContainer}></View>
       <Text style={styles.textStyle}>Not yet...</Text>
     </TouchableOpacity>
   );
@@ -26,11 +27,21 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#f14722",
+    position: "relative",
+  },
+  whiteContainer: {
+    height: 54,
+    width: 154,
+    borderRadius: 16,
+    backgroundColor: "white",
+    position: "absolute",
+    zIndex: 1,
   },
   textStyle: {
     fontWeight: "bold",
-    color: "white",
+    color: "black",
     fontSize: 28,
     fontFamily: "RobotoMono",
+    zIndex: 2,
   },
 });

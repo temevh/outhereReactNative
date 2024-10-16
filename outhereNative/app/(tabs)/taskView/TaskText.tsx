@@ -20,27 +20,25 @@ const TaskText = () => {
 const styles = StyleSheet.create({
   container: {
     height: 200,
-    width: 350,
+    width: 330,
     borderRadius: 14,
     backgroundColor: "#595151",
     justifyContent: "center",
     alignItems: "center",
   },
   dateText: {
-    fontSize: 24,
-    color: "white",
-    opacity: 0.4,
+    fontSize: 22,
+    color: "grey",
   },
   taskText: {
-    fontSize: 36,
+    fontSize: 34,
     color: "white",
     paddingVertical: 20,
     textAlign: "center",
   },
   categoryText: {
     fontSize: 20,
-    color: "white",
-    opacity: 0.4,
+    color: "grey",
   },
 });
 

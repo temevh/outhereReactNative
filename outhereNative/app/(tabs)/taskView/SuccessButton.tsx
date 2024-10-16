@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, TouchableOpacity } from "react-native";
+import { Text, StyleSheet, TouchableOpacity, View } from "react-native";
 import { useRouter } from "expo-router";
 
 const SuccessButton = () => {
@@ -11,7 +11,8 @@ const SuccessButton = () => {
   };
 
   return (
-    <TouchableOpacity style={[styles.buttonStyle]} onPress={handlePress}>
+    <TouchableOpacity style={styles.buttonStyle} onPress={handlePress}>
+      <View style={styles.whiteContainer}></View>
       <Text style={styles.textStyle}>I did it!</Text>
     </TouchableOpacity>
   );
@@ -21,17 +22,28 @@ export default SuccessButton;
 
 const styles = StyleSheet.create({
   buttonStyle: {
-    height: 60,
-    width: 160,
-    borderRadius: 16,
+    height: 100,
+    width: 200,
+    borderRadius: 24,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#13ae5c",
+    position: "relative",
+  },
+  whiteContainer: {
+    height: 90,
+    width: 190,
+    borderRadius: 24,
+    backgroundColor: "white",
+    position: "absolute",
+    zIndex: 1,
   },
   textStyle: {
     fontWeight: "bold",
-    color: "white",
-    fontSize: 28,
+    color: "black",
+    opacity: 0.8,
+    fontSize: 46,
     fontFamily: "RobotoMono",
+    zIndex: 2,
   },
 });
