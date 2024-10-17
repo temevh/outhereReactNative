@@ -5,7 +5,7 @@ import HeaderText from "@/components/HeaderText";
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <HeaderText />
+      {/*<HeaderText />*/}
       <MainTask />
     </View>
   );

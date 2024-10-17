@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { StyleSheet, TextInput, Text, View } from "react-native";
 
-const TextField = () => {
+const TextField = ({ header }) => {
   const [text, onChangeText] = useState("");
 
   return (
     <View style={styles.container}>
-      <Text style={styles.questionText}>Write a few words about the task</Text>
+      <Text style={styles.questionText}>{header}</Text>
       <TextInput
         style={styles.input}
         onChangeText={onChangeText}

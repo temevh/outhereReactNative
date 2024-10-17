@@ -4,10 +4,21 @@ import { Text, StyleSheet, View } from "react-native";
 
 interface SliderComponentProps {
   header: string;
+  onValueChange: (field: string, value: number) => void;
+  field: string;
 }
 
-const SliderComponent = ({ header }: SliderComponentProps) => {
+const SliderComponent = ({
+  header,
+  onValueChange,
+  field,
+}: SliderComponentProps) => {
   const [sliderValue, setSliderValue] = useState(1);
+
+  const handleValueChange = (value: number) => {
+    setSliderValue(value);
+    onValueChange(field, value);
+  };
 
   return (
     <View style={styles.container}>
@@ -21,7 +32,7 @@ const SliderComponent = ({ header }: SliderComponentProps) => {
           maximumTrackTintColor="#000000"
           step={1}
           value={sliderValue}
-          onValueChange={(value) => setSliderValue(value)}
+          onValueChange={handleValueChange}
           thumbTintColor="lightgreen"
         />
         <Text style={styles.valueStyle}>{sliderValue}</Text>
