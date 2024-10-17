@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import SuccessButton from "./SuccessButton";
 import TaskImage from "./TaskImage";
 import TaskText from "./TaskText";
