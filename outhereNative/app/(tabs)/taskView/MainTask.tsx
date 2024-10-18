@@ -1,10 +1,16 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Button } from "react-native";
 import SuccessButton from "./SuccessButton";
 import TaskImage from "./TaskImage";
 import TaskText from "./TaskText";
 import FailButton from "./FailButton";
+import firestore from "@react-native-firebase/firestore";
 
 const MainTask = () => {
+  const fetchData = async () => {
+    const dataCollection = await firestore().collection("data").get();
+    console.log(dataCollection.docs[0].data);
+  };
+
   return (
     <View style={styles.container}>
       <TaskImage />
@@ -12,6 +18,7 @@ const MainTask = () => {
       <View style={styles.buttonContainer}>
         <SuccessButton />
         <FailButton />
+        <Button title="fetch data" onPress={fetchData} />
       </View>
     </View>
   );

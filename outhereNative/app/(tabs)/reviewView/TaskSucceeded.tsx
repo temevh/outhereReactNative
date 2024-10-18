@@ -21,7 +21,6 @@ const TaskSucceeded = () => {
       ...prevReview,
       [field]: value,
     }));
-    console.log(field, value, review);
   };
 
   return (
