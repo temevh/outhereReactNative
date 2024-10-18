@@ -13,7 +13,7 @@ const TaskSucceeded = () => {
     easiness: 0,
     enjoyment: 0,
     feeling: 0,
-    text: 0,
+    text: "",
   });
 
   const handleFieldChange = (field: string, value: number | string) => {
@@ -21,6 +21,7 @@ const TaskSucceeded = () => {
       ...prevReview,
       [field]: value,
     }));
+    console.log(field, value, review);
   };
 
   return (
@@ -44,7 +45,8 @@ const TaskSucceeded = () => {
         />
         <TextField
           header={"Write a few words about the task"}
-          onValueChange={(value) => handleFieldChange("text", value)}
+          onValueChange={handleFieldChange}
+          field="text"
         />
       </View>
       <TouchableOpacity style={styles.buttonStyle} onPress={handlePress}>

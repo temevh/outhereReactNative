@@ -1,15 +1,26 @@
 import { useState } from "react";
 import { StyleSheet, TextInput, Text, View } from "react-native";
 
-const TextField = ({ header }) => {
-  const [text, onChangeText] = useState("");
+interface TextFieldProps {
+  header: string;
+  onValueChange: (field: string, value: string) => void;
+  field: string;
+}
+
+const TextField = ({ header, field, onValueChange }: TextFieldProps) => {
+  const [text, setText] = useState("");
+
+  const handleTextChange = (newText: string) => {
+    setText(newText);
+    onValueChange(field, newText);
+  };
 
   return (
     <View style={styles.container}>
       <Text style={styles.questionText}>{header}</Text>
       <TextInput
         style={styles.input}
-        onChangeText={onChangeText}
+        onChangeText={handleTextChange}
         value={text}
         multiline={true}
         textAlignVertical="top"
