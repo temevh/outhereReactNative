@@ -7,8 +7,14 @@ import firestore from "@react-native-firebase/firestore";
 
 const MainTask = () => {
   const fetchData = async () => {
-    const dataCollection = await firestore().collection("data").get();
-    console.log(dataCollection.docs[0].data);
+    try {
+      const dataCollection = await firestore().collection("data").get();
+      dataCollection.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+      });
+    } catch (error) {
+      console.error("Error fetching Firestore data: ", error);
+    }
   };
 
   return (
